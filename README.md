@@ -1,8 +1,9 @@
 # ResearchConnect
 Your one stop destinaton to all questions related to research admissions and application process
 
-
-
+<div align="center">
+    <img src="Screenshots/1.png" width="400px"</img> 
+</div>
 ## UI
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
