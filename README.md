@@ -1,4 +1,9 @@
-# Ui
+# ResearchConnect
+Your one stop destinaton to all questions related to research admissions and application process
+
+
+
+## UI
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
 
