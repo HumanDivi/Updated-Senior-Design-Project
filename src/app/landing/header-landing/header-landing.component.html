@@ -1,0 +1,28 @@
+<!-- Will include sign up here -->
+<header>
+  <app-nav-landing></app-nav-landing>
+  <div class="row pb-12">
+    <div class="col-4 ml-auto">
+      <div>
+        <h1 id="welcome">
+          Welcome to  <br />
+           ResearchConnect
+        </h1>
+        <p>
+          Your one stop destinaton to all questions related to research
+          admissions and application process
+        </p>
+        <div>
+          <!-- This needs changed to a click event-->
+          <a routerLink="/auth" class="signUp"><button class="btn btn-success px-4">Sign up now</button></a>
+          <p>Already a user, sign in <a routerLink="/auth" class="signIn"><u>here</u></a></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-4 mr-auto">
+      <div class="overlay">
+        <img src="assets/images/landing-researchers.jpg" class="img" alt="Researchers" />
+      </div>
+      </div>
+    </div>
+</header>

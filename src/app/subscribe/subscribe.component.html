@@ -1,0 +1,26 @@
+<div class="backdrop" (click)="onClose()"></div>
+<div class="subscribe-box">
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="col-sm-5 form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        class="form-control"
+        name="email"
+        ngModel
+        required
+        email
+        #email="ngModel"
+      />
+    </div>
+    <span class="help-block" *ngIf="!email.valid && email.touched">
+      Please enter email!</span
+    >
+    <br /><br />
+    <button class="btn btn-primary" type="submit" [disabled]="!f.valid">
+      Subscribe </button
+    >|
+    <button class="btn btn-primary" (click)="onClose()">Close</button>
+  </form>
+</div>

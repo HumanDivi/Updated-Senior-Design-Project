@@ -1,0 +1,99 @@
+<app-header-landing></app-header-landing>
+<div id="landing-wrapper" class="pb-5">
+  <div id="our-services" class="bg-white pb-5">
+    <div class="row pt-4">
+      <div class="col-12 text-center">
+        <h1 class="text-dark">Our Services</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8 mx-auto text-dark">
+        <h5>What do we do?</h5>
+        <ul class="text-dark">
+          <li>Connect students and professors with common research interests​</li>
+          <li>Identify peers with similar goals​</li>
+          <li>Display resources used for implementing University research</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" id="choose-us">
+      <div class="col-4 ml-auto">
+        <img src="/assets/images/landing-graduation.jpg" class="img" alt="People graduating" />
+      </div>
+      <div class="col-4 mr-auto">
+        <h5 class="text-dark">Why choose us?</h5>
+        <ul class="text-dark">
+          <li>Provide exceptional customer service, including opportunities for platform feedback</li>
+          <li>Our easy to use platform will connect you with hundreds of research opportunities and resources
+            that meet your school needs​</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row py-4" id="faqs">
+    <div class="col-12 text-center">
+      <h1>FAQ's</h1>
+    </div>
+  </div>
+  <div class="row py-4">
+    <div class="col-4 mx-auto text-center">
+      <h4 class="text-lime pb-4">Is there any fee to sign up?</h4>
+      <p class="pb-4">
+        No, our services are free! We understand what it
+        feels like to get connected with like minded individuals interested in
+        research work. We also understand the hassle that goes into finding the correct
+        university.
+      </p>
+      <h4 class="text-lime pb-4">
+       Can I get assistance with what services you provide?
+      </h4>
+      <p class="pb-4">
+        Absolutely, we have a dedicated customer service team 24/7 who's here to
+        help with any questions pertaining to the use of website and our
+        services. We believe that only when our customers are happy we will
+        accomplish our goal
+      </p>
+    </div>
+    <div class="col-4 mr-auto">
+      <img src="/assets/images/landing-scientist.jpg" class="img" alt="Female scientist" />
+    </div>
+  </div>
+  <div class="row pt-4">
+    <div class="col-12 text-center">
+      <h1 class="pb-3">What Can We Help You With?</h1>
+      <p class="text-lime pb-5">
+        For more information or if you have any questions please reach out to us!
+      </p>
+    </div>
+    <div>
+    </div>
+  </div>
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm" id="help-form">
+    <div id="user-data" ngModelGroup="userData" #userData="ngModelGroup">
+      <div class="form-row pb-4 mx-auto">
+        <div class="col-3 ml-auto pl-3">
+          <input type="text" id="name" class="form-control" name="name" placeholder="Name" ngModel required />
+          <span class="help-block text-danger col-4 mx-auto" *ngIf="!userData.valid && userData.touched">Please fill out
+            your Name</span>
+        </div>
+        <div class="col-3 mr-auto pr-3">
+          <input type="email" id="email" class="form-control" name="email" placeholder="Email" ngModel required email />
+          <span class="help-block text-danger col-4 mx-auto" *ngIf="!userData.valid && userData.touched">Please fill out
+            your Email</span>
+        </div>
+      </div>
+      <div class="col-6 form-group mx-auto">
+        <textarea id="subject" class="form-control" name="subject" rows="1" placeholder="Subject"></textarea>
+      </div>
+      <div class="col-6 form-group mx-auto">
+        <textarea id="description" class="form-control" name="description" rows="3" placeholder="Type your message here. . ."></textarea>
+      </div>
+      <div class="col-6 mx-auto">
+        <button class="btn btn-light col-12 py-2" type="submit" [disabled]="!f.valid">
+          Submit
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+<app-footer></app-footer>
